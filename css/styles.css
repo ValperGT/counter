@@ -55,10 +55,6 @@ body{
     transition: opacity 150ms ease-in;
 }
 
-.counter__button:hover{
-    opacity: 0.9;
-}
-
 .button1{
     grid-area: button1;
 }
