@@ -1,0 +1,82 @@
+:root{
+    --body-color: #FBFBFB;
+    --counter-color: #FFFFFF;
+    --title-color: #242424;
+    --number-color: #2F2F2F;
+}
+
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--body-color);
+    font-family: 'Poppins', sans-serif;
+}
+
+.counter{
+    width: 30rem;
+    min-width: 14rem;
+    display: grid;
+    border-radius: 7px;
+    padding: 2.5rem 1rem;
+    box-shadow: 0px 10px 25px rgba(0,0,0, 0.2);
+    background-color: var(--counter-color);
+    grid-template-areas: "title title title" "number number number" "button1 button2 button3";
+}
+
+.counter__title{
+    font-weight: 700;
+    margin: 1rem 0;
+    color: var(--title-color);
+    font-size: 3rem;
+    grid-area: title;
+    justify-self: center;
+}
+
+.counter__number{
+    font-weight: 300;
+    margin: 1rem 0;
+    color: var(--number-color);
+    font-size: 4rem;
+    grid-area: number;
+    justify-self: center;
+}
+
+.counter__button{
+    margin: 1rem 0.2rem;
+    cursor: pointer;
+    border-radius: 100px;
+    color: var(--counter-color);
+    border: none;
+    padding: 0.5rem 1.2rem;
+    background-color: var(--title-color);
+    transition: opacity 150ms ease-in;
+}
+
+.counter__button:hover{
+    opacity: 0.9;
+}
+
+.button1{
+    grid-area: button1;
+}
+
+.button2{
+    grid-area: button2;
+}
+
+.button3{
+    grid-area: button3;
+}
+
+@media screen and (max-width: 600px){
+    .counter{
+        grid-template-areas: "title" "number" "button3" "button2" "button1";
+        margin: 0 1rem;
+    }
+
+    .counter__button{
+        margin: 0.5rem 0.2rem;
+    }
+}
